@@ -126,7 +126,7 @@ PUT /animais/1
 
 
 DELETE /animais/1
-# Retorna 204 No Content se deletado com sucesso.
+Retorna 204 No Content se deletado com sucesso.
 
 
 ## ⚡ Como Rodar o Projeto
