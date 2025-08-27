@@ -44,24 +44,19 @@ O **PetManager** é um sistema de gerenciamento de animais de estimação, desen
 br.com.fiap
 │
 ├── controller
-│ └── AnimalController.java 
-# Controla endpoints REST
+│ └── AnimalController.java - Controla endpoints REST
 │
 ├── model
-│ └── Animal.java 
-# Modelo de dados do Animal
+│ └── Animal.java - Modelo de dados do Animal
 │
 ├── repository
-│ └── AnimalRepository.java 
-# Repositório em memória
+│ └── AnimalRepository.java - Repositório em memória
 │
 ├── service
-│ └── AnimalService.java 
-# Lógica de negócio
+│ └── AnimalService.java - Lógica de negócio
 │
 └── petmanager
-└── App.java 
-# Classe principal Spring Boot
+└── App.java - Classe principal Spring Boot
 
 
 ---
@@ -83,7 +78,7 @@ Todos os endpoints são baseados em `/animais`.
 
 ## 📝 Exemplo de Requisições
 
-### GET `/animais`
+GET `/animais`
 ```json
 [
   {
@@ -136,14 +131,14 @@ DELETE /animais/1
 
 ## ⚡ Como Rodar o Projeto
 
-# 1. Clone o repositório:
+1. Clone o repositório:
 git clone https://github.com/SeuUsuario/PetManager.git
 cd PetManager
 
-# 2. Compile e rode o projeto:
+2. Compile e rode o projeto:
 mvn spring-boot:run
 
-# 3. Acesse a API:
+3. Acesse a API:
 http://localhost:8080/animais
 
 
