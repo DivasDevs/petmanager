@@ -2,6 +2,7 @@ package br.com.fiap.controller;
 
 import br.com.fiap.model.Animal;
 import br.com.fiap.service.AnimalService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,6 +14,7 @@ public class AnimalController {
 
     private final AnimalService service;
 
+    @Autowired
     public AnimalController(AnimalService service) {
         this.service = service;
     }
@@ -36,11 +38,11 @@ public class AnimalController {
 
     @PutMapping("/{id}")
     public ResponseEntity<Animal> atualizar(@PathVariable Long id, @RequestBody Animal animal) {
-        if (!service.buscarPorId(id).isPresent()) {
-            return ResponseEntity.notFound().build();
+        Animal animalAtualizado = service.atualizar(id, animal);
+        if (animalAtualizado != null) {
+            return ResponseEntity.ok(animalAtualizado);
         }
-        animal.setId(id);
-        return ResponseEntity.ok(service.criarOuAtualizar(animal));
+        return ResponseEntity.notFound().build();
     }
 
     @DeleteMapping("/{id}")
