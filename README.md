@@ -7,8 +7,6 @@
 
 ---
 
-## 🎬 Demonstração
-
 ![PetManager Demo](https://media.giphy.com/media/3o6ZtpxSZbQRRnwCKQ/giphy.gif)  
 *Exemplo de uso da API PetManager em ação.*
 
